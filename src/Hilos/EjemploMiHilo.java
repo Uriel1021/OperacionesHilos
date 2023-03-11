@@ -1,3 +1,5 @@
+package Hilos;
+
 public class EjemploMiHilo implements Runnable {
     @Override
     public void run() {

@@ -1,3 +1,5 @@
+package Hilos;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,11 +11,13 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
 public class Descargas extends JFrame implements ActionListener {
-
+    //Se define tres progressBar
     private JProgressBar progressBar1, progressBar2, progressBar3;
+    //Se define un boton
     private JButton btnDescarga1;
+    //Se inicializa los progressBar y el boton y se muestra la ventana
     public Descargas() {
-        super("Descargas");
+        super("Hilos.Descargas");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Configuración de los controles ProgressBar
         progressBar1 = new JProgressBar(0, 50);
@@ -42,7 +46,7 @@ public class Descargas extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
         setVisible(true);
     }
-
+    //Metodo actionPerformed para que cuando se de click al boton se inicie la simulacion de descarga
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnDescarga1) {
             Descarga descarga1 = new Descarga(progressBar1);
@@ -57,6 +61,7 @@ public class Descargas extends JFrame implements ActionListener {
         }
     }
 
+    //Metodo Descarga que se extiende a Thread y simula el avance de progreso mientras que progreso sea menor a 50
     private class Descarga extends Thread {
         private JProgressBar progressBar;
         private Random random;
@@ -79,7 +84,7 @@ public class Descargas extends JFrame implements ActionListener {
             progressBar.setString("Descarga completa");
         }
     }
-
+    //Metodo principal que utiliza EventQueue y rescribe el metodo runnable para ejecutar hilos con hilos y interfaz
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {

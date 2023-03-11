@@ -1,15 +1,19 @@
+package Hilos;
+
 public class Contador implements Runnable {
 
     private int contador;
     private String nombre;
     private int limiteConteo;
 
+    //Se crea un constructor que recibe a nombre y el limite que va a contar
     public Contador(String nombre, int limiteConteo) {
         this.nombre = nombre;
         this.limiteConteo = limiteConteo;
         contador = 0;
     }
 
+    //Metodo run para asignar un numero, despues dormir el hilo 100 milisegundos. Si el contador es mayor al limite se mata el hilo
     public void run() {
         while (contador < limiteConteo) {
             System.out.println(nombre + " contando: " + contador);

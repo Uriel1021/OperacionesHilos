@@ -1,3 +1,4 @@
+package Hilos;
 
 public class HilosOperaciones implements Runnable {
 
@@ -23,6 +24,7 @@ public class HilosOperaciones implements Runnable {
         }
     }
 
+    //Calcular los primeros 10 elementos de la serie de fibonacci
     private void calcularFibonacci() {
         System.out.println("\nSERIE DE FIBONACCI\n");
         int n = 10;
@@ -35,7 +37,7 @@ public class HilosOperaciones implements Runnable {
             b = c;
         }
     }
-
+    //Calcular el factorial de un numero
     private void calcularFactorial() {
         System.out.println("\nFACTORIAL\n");
         int n = 12;
@@ -46,6 +48,7 @@ public class HilosOperaciones implements Runnable {
         System.out.println(n + "! = " + factorial);
     }
 
+    //Encontrar X1 y X2 con la formula general
     private void calcularRaices() {
 
         System.out.println("\nRAIZ CUADRATICA\n");
@@ -64,10 +67,11 @@ public class HilosOperaciones implements Runnable {
             System.out.println("\nHay dos raíces reales: x1 = " + x1 + ", x2 = " + x2 +"\n");
         }
     }
+    //En el metodo main se crea un hilo y como parametro recibe el tipo de operacion
     public static void main(String[] args) {
         HilosOperaciones hilo1 = new HilosOperaciones(4);
-        //HilosOperaciones hilo2 = new HilosOperaciones(2);
-        //HilosOperaciones hilo3 = new HilosOperaciones(4);
+        //Hilos.HilosOperaciones hilo2 = new Hilos.HilosOperaciones(2);
+        //Hilos.HilosOperaciones hilo3 = new Hilos.HilosOperaciones(4);
 
         Thread t1 = new Thread(hilo1);
         //Thread t2 = new Thread(hilo2);
