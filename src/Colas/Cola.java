@@ -28,6 +28,8 @@ public class Cola {
             System.out.println("La cola está llena.");
             return;
         }
+        // si fin + 1 = 10 fuera de la capacidad
+        // si fin +1 modulo de la capacidad = 0
         fin = (fin + 1) % CAPACIDAD_MAXIMA;
         elementos[fin] = elemento;
         tamanio++;
