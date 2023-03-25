@@ -21,7 +21,7 @@ public class Servidor {
                 Realiza alguna operación basada en esa solicitud y devuelve un
                 resultado al solicitante.
              */
-            ServerSocket servidor = new ServerSocket(81);
+            ServerSocket servidor = new ServerSocket(3030);
             while(true){
                 Socket cliente = servidor.accept();
 

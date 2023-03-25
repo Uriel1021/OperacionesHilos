@@ -8,8 +8,8 @@ public class Cliente {
     private static DataInputStream entrada;
     private static DataOutputStream salida;
     static void ejecutarCliente(String msj) {
-        String ip = "172.25.3.65";
-        int puerto = 81;
+        String ip = "192.168.0.107";
+        int puerto = 3030;
         log("Conectado a traves de Socket: " + ip + " Puerto: " + puerto);
         try{
             /*
