@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class Cliente {
     private static final String IP_SERVIDOR = "localhost";
-    private static final int PUERTO_SERVIDOR = 4040;
+    private static final int PUERTO_SERVIDOR = 5050;
 
     private static DataInputStream entrada;
     private static DataOutputStream salida;
